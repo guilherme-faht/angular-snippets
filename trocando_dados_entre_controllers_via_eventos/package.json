@@ -1,0 +1,19 @@
+{
+  "name": "trocando_dados_entre_controllers_via_eventos",
+  "version": "1.0.0",
+  "description": "Dica para troca de dados entre controllers via eventos no angularJS.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "paginacao",
+    "angularjs"
+  ],
+  "author": "Guilherme.Faht (GURUX)",
+  "license": "MIT",
+  "devDependencies": {
+    "angular": "^1.5.9",
+    "bootstrap": "^3.3.7"
+  }
+}
