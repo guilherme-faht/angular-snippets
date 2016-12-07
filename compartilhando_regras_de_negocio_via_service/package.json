@@ -1,0 +1,19 @@
+{
+  "name": "compartilhando_regras_de_negocio_via_service",
+  "version": "1.0.0",
+  "description": "Dica de compartilhamento de regras de negócio utilizando services do angularJS.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "paginacao",
+    "angularjs"
+  ],
+  "author": "Guilherme.Faht (GURUX)",
+  "license": "MIT",
+  "devDependencies": {
+    "angular": "^1.5.9",
+    "bootstrap": "^3.3.7"
+  }
+}
