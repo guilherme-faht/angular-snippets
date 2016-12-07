@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dicas Angular 1: Loading para Requisições Ajax</title>
+
+        <!-- Bootstrap -->
+        <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Angular -->
+        <script src="node_modules/angular/angular.min.js"></script>
+        
+        <!-- src -->
+        <script src="src/js/app.js"></script>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body ng-controller="twitterCtrl">
+        <h1 class="text-center">Dicas Angular 1: Loading para Requisições Ajax</h1>
+        <br>
+        <div>
+            <button class="btn" ng-click="load()">Carregar Tweets</button>
+            <img id="spinner" ng-src="src/img/ajax-loader.gif" style="display:none;">
+        </div>
+        <div>
+            <ul ng-repeat="tweet in tweets">
+                <li>
+                    <img ng-src="{{tweet.profile_image_url}}" alt="">
+                    &nbsp; {{tweet.from_user}}
+                    {{tweet.text}}
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

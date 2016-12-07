@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dicas Angular 1: Paginação modo Client-side Data</title>
+
+        <!-- Bootstrap -->
+        <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Angular -->
+        <script src="node_modules/angular/angular.min.js"></script>
+        
+        <!-- src -->
+        <script src="src/js/app.js"></script>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body ng-controller="paginationCtrl">
+        <h1 class="text-center">Dicas Angular 1: Paginação modo Server-side Data</h1>
+        <br>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in itens">
+                    <td>{{item.codigo}}</td>
+                    <td>{{item.descricao}}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <td colspan="3">
+                    <div class="text-center">
+                        <ul class="pagination">
+                            <li ng-class="prevPageDisabled()">
+                                <a href ng-click="prevPage()">« Anterior</a>
+                            </li>
+                            <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)">
+                                <a href="#">{{n+1}}</a>
+                            </li>
+                            <li ng-class="nextPageDisabled()">
+                                <a href ng-click="nextPage()">Próximo »</a>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tfoot>
+        </table>
+    </body>
+</html>
